@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: conduitApp.ConduitTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.933 s - in conduitApp.ConduitTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.259 s <<< FAILURE! - in conduitApp.ConduitTest
+testAll  Time elapsed: 0.259 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: no features or scenarios found: [classpath:conduitApp]
+

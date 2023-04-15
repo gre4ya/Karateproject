@@ -1,4 +1,4 @@
-
+@smoke
 Feature: Test for the home page
 
 Background: Define URL
@@ -12,7 +12,6 @@ Scenario: Get all tags
     And match response.tags !contains 'Hitler'
     And match response.tags == "#array"
     And match each response.tags == "#string"
-@ignore
 Scenario: Get 10 articles from the page
     Given params {limit: 10, offset: 0}
     Given path 'articles'

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"9b4b3851-aa13-49b5-999c-e3d68b6bd5a6",karate_version:"1.4.0",karate_meta:null});
+  }
+});
+</script>
+
+    <title>techGlobal.feature.Students</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">2</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2023-04-14 04:38:20 PM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:7]"><span>[1:7]</span> <span>Create a student</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:13]"><span>[2:13]</span> <span>Create and delete student</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">techGlobal/feature/Students.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Validate Tech Global backend function</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:7]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">tg</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:7]</span>
+                <span class="scenario-name">Create a student</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>711</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:7]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:7]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://tech-global-training.com/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">9</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">16:38:19.668 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;students&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {&quot;firstName&quot;:&quot;aq&quot;,&quot;lastName&quot;:&quot;dqd&quot;,&quot;email&quot;:&quot;asdfaaaa@gmail.com&quot;,&quot;dob&quot;:&quot;2001-02-02&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">43</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method Post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">659</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">16:38:20.081 request:
+1 &gt; POST https://tech-global-training.com/students
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 83
+1 &gt; Host: tech-global-training.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.17)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstName&quot;:&quot;aq&quot;,&quot;lastName&quot;:&quot;dqd&quot;,&quot;email&quot;:&quot;asdfaaaa@gmail.com&quot;,&quot;dob&quot;:&quot;2001-02-02&quot;}
+
+16:38:20.414 response time in milliseconds: 328
+1 &lt; 200
+1 &lt; Date: Fri, 14 Apr 2023 21:38:20 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 93
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 12a56dbd-f41e-4327-97ac-8dbcb496da8a
+1 &lt; Access-Control-Allow-Headers: Content-Type, Accept, X-Requested-With, remember-me
+1 &lt; x-amzn-Remapped-Connection: keep-alive
+1 &lt; x-amz-apigw-id: DYwn-HuZiYcFsyg=
+1 &lt; Vary: Origin
+1 &lt; Vary: Access-Control-Request-Method
+1 &lt; Vary: Access-Control-Request-Headers
+1 &lt; x-amzn-Remapped-Server: nginx/1.22.1
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, PATCH, DELETE
+1 &lt; x-amzn-Remapped-Date: Fri, 14 Apr 2023 21:38:20 GMT
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Access-Control-Allow-Credentials: true
+{&quot;id&quot;:1137,&quot;firstName&quot;:&quot;aq&quot;,&quot;lastName&quot;:&quot;dqd&quot;,&quot;email&quot;:&quot;asdfaaaa@gmail.com&quot;,&quot;dob&quot;:&quot;2001-02-02&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:13]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">tg</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:13]</span>
+                <span class="scenario-name">Create and delete student</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>244</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:13]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:13]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://tech-global-training.com/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">16:38:20.449 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;students&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {&quot;firstName&quot;:&quot;aq&quot;,&quot;lastName&quot;:&quot;dqd&quot;,&quot;email&quot;:&quot;asdf1aa@gmail.com&quot;,&quot;dob&quot;:&quot;2001-02-02&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method Post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">124</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.16">16:38:20.459 request:
+1 &gt; POST https://tech-global-training.com/students
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 82
+1 &gt; Host: tech-global-training.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.17)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstName&quot;:&quot;aq&quot;,&quot;lastName&quot;:&quot;dqd&quot;,&quot;email&quot;:&quot;asdf1aa@gmail.com&quot;,&quot;dob&quot;:&quot;2001-02-02&quot;}
+
+16:38:20.576 response time in milliseconds: 113
+1 &lt; 200
+1 &lt; Date: Fri, 14 Apr 2023 21:38:20 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 92
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 36c2863f-f088-4827-bcd3-a6cc160a392d
+1 &lt; Access-Control-Allow-Headers: Content-Type, Accept, X-Requested-With, remember-me
+1 &lt; x-amzn-Remapped-Connection: keep-alive
+1 &lt; x-amz-apigw-id: DYwoAFYbiYcF4hg=
+1 &lt; Vary: Origin
+1 &lt; Vary: Access-Control-Request-Method
+1 &lt; Vary: Access-Control-Request-Headers
+1 &lt; x-amzn-Remapped-Server: nginx/1.22.1
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, PATCH, DELETE
+1 &lt; x-amzn-Remapped-Date: Fri, 14 Apr 2023 21:38:20 GMT
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Access-Control-Allow-Credentials: true
+{&quot;id&quot;:1138,&quot;firstName&quot;:&quot;aq&quot;,&quot;lastName&quot;:&quot;dqd&quot;,&quot;email&quot;:&quot;asdf1aa@gmail.com&quot;,&quot;dob&quot;:&quot;2001-02-02&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def studenId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;students&#39;,studenId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method Delete</span>
+      </div>
+    </div>
+    <div class="time-cell passed">98</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.21">16:38:20.602 request:
+2 &gt; DELETE https://tech-global-training.com/students/1138
+2 &gt; Host: tech-global-training.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.17)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+16:38:20.697 response time in milliseconds: 94
+2 &lt; 200
+2 &lt; Date: Fri, 14 Apr 2023 21:38:20 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Content-Length: 0
+2 &lt; Connection: keep-alive
+2 &lt; x-amzn-RequestId: 1732331e-f466-4421-9899-ecef1ac513ea
+2 &lt; Access-Control-Allow-Headers: Content-Type, Accept, X-Requested-With, remember-me
+2 &lt; x-amzn-Remapped-Content-Length: 0
+2 &lt; x-amzn-Remapped-Connection: keep-alive
+2 &lt; x-amz-apigw-id: DYwoBGrFiYcFtLg=
+2 &lt; Vary: Origin
+2 &lt; Vary: Access-Control-Request-Method
+2 &lt; Vary: Access-Control-Request-Headers
+2 &lt; x-amzn-Remapped-Server: nginx/1.22.1
+2 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, PATCH, DELETE
+2 &lt; x-amzn-Remapped-Date: Fri, 14 Apr 2023 21:38:20 GMT
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Access-Control-Allow-Credentials: true
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
