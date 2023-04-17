@@ -27,6 +27,16 @@ Scenario: Get 10 articles from the page
     And match response.articles[*].favoriteCount contains 1
     And match response.articles[*].authors.bio contains null
 #   And match response..bio contains null == match response.articles[*].authors.bio contains null
-    And match each response..following == false        
+    And match each response..following == false    
+    
+    #Fuzzy Matcher
+    And match each response..following == '#boolean' // data type validation
+    And match each response..favoriteCount == '#number'
+    And match each response..bio == '##string' // it may be string, or not (optinal value)
+
+    
+
+
+
 
 
