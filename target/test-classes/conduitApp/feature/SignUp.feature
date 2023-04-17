@@ -63,15 +63,15 @@ Scenario: New user Sign Up
         And match response == <errorMessage>
 
         Examples:
-        |email               |password  |username          |errorMessage                                                                        |
-        |#(randomEmail)      |Karate123 |KarateUser123     |{"errors":{"username":["has already been taken"]}}                                  |
-        |KarateUser1@test.com|Karate123 |#(randomUsername) |{"errors":{"email":["has already been taken"]}}                                     |
-        |KarateUser1         |Karate123 |#(randomUsername) |{"errors":{"email": ["is invalid"]}}                                                |
-        |#(randomEmail)      |Karate123 |Karate123123123123|{"errors":{"username": ["is too long (maximum is 20 characters)"]}}                 |
-        |#(randomEmail)      |Kar       |#(randomUsername) |{"errors":{"username": ["is too short (miniomum is 8 characters)"]}}                |
-        |                    |Karate123 |#(randomUsername) |{"errors":{"email":["can't be blank"]}}                                             |
-        |#(randomEmail)      |          |#(randomUsername) |{"errors":{"password": ["can't be blank"]}}                                         |
-        |#(randomEmail)      |Karate123 |                  |{"errors":{"username": ["can't be blank", "is too short (minimum is 1 character)"]}}|
+        |email               |password  |username          |errorMessage                                                                       |
+        |#(randomEmail)      |Karate123 |KarateUser123     |{"errors":{"username":["has already been taken"]}}                                 |
+        |KarateUser1@test.com|Karate123 |#(randomUsername) |{"errors":{"email":["has already been taken"]}}                                    |
+        |KarateUser1         |Karate123 |#(randomUsername) |{"errors":{"email":["is invalid"]}}                                                |
+        |#(randomEmail)      |Karate123 |Karate123123123123|{"errors":{"username":["is too long (maximum is 20 characters)"]}}                 |
+        |#(randomEmail)      |Kar       |#(randomUsername) |{"errors":{"username":["is too short (miniomum is 8 characters)"]}}                |
+        |                    |Karate123 |#(randomUsername) |{"errors":{"email":["can't be blank"]}}                                            |
+        |#(randomEmail)      |          |#(randomUsername) |{"errors":{"password":["can't be blank"]}}                                         |
+        |#(randomEmail)      |Karate123 |                  |{"errors":{"username":["can't be blank", "is too short (minimum is 1 character)"]}}|
 
             
             
