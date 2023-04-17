@@ -8,17 +8,19 @@ Background: Define URL
     # When method Post
     # Then status 200
     # * def token = response.user.token
-    * def tokenResponse = callonce read('classpath:healpers/CreateToken.feature') {"email": "pikacvhy@gmail.com","password": "12345678"}
-    * def token = tokenResponse.authToken
+
+    ## in karate-config.js line 20, 21 to eliminate line 13, 14 in this file
+    # * def tokenResponse = callonce read('classpath:healpers/CreateToken.feature')
+    # * def token = tokenResponse.authToken
 Scenario: Create a new article
-    Given header Authorization = 'Token ' + token
+    #Given header Authorization = 'Token ' + token (karate-config.js line 21)
     Given path 'articles'
     And request {"article":{"tagList":["cats"],"title":"article02","description":"this article is about cats","body":"cats are the best"}}
     When method Post
     Then status 200
     And match response.article.title == 'article123456789'
 Scenario: Create and delete article
-    Given header Authorization = 'Token ' + token
+    #Given header Authorization = 'Token ' + token (karate-config.js line 21)
     Given path 'articles'
     And request {"article":{"tagList":["cats"],"title":"article2","description":"this article is about cats","body":"cats are the best"}}
     When method Post
@@ -31,11 +33,10 @@ Scenario: Create and delete article
     Then status 200
     And match response.articles[0].title == 'If we quantify the alarm, we can get to the FTP pixel through the online SSL interface!'
 
-    Given header Authorization = 'Token ' + token
+    #Given header Authorization = 'Token ' + token (karate-config.js line 21)
     Given path 'articles',articleId
     When method Delete
     Then status 204
-
 
     Given params {limit: 10, offset: 0}
     Given path 'articles'
