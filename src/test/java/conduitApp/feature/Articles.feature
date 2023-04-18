@@ -10,7 +10,7 @@ Background: Define URL
     # Then status 200
     # * def token = response.user.token
 
-    ## in karate-config.js line 20, 21 to eliminate line 13, 14 in this file
+    # in karate-config.js line 20, 21 to eliminate line 13, 14 in this file
     # * def tokenResponse = callonce read('classpath:healpers/CreateToken.feature')
     # * def token = tokenResponse.authToken
 
