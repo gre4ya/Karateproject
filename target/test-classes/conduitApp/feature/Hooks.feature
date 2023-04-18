@@ -5,9 +5,9 @@ Background: hooks
     # * def username = result.username
 
     # after hooks
-    * configure afterScenario = function(){ karate.call('classpath:helpers/Dummy.feature') }
-    * configure afterFeature = 
-    """
+    * configure afterScenario = function(){ karate.call('classpath:helpers/Dummy.feature') } // runs after each scenario
+    * configure afterFeature = // runs after each feature (embeaded expression)
+    """ 
         function(){
             karate.log('After Feature Text')
         }
