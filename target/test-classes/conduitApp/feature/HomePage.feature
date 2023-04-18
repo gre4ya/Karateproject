@@ -101,7 +101,18 @@ Scenario: Sleep call
 
     Then status 200
 
+Scenario: Number to string
+    * def foo = 10
+    * def json = {"bar": #(foo+'')}
+    * match json == {"bar": '10'}    
 
+Scenario: String to number
+    * def foo = '10'
+    * def json = {"bar": #(foo*1)}
+    * def json2 = {"bar": #(parseInt(foo)} // when compared to string returns double 10.0
+    # * def json2 = {"bar": #(~~parseInt(foo)} -> when compared to string returns integer 10
+    * match json == {"bar": 10}    
+    * match json2 == {"bar": 10}    
 
 
 
