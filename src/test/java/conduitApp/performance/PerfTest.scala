@@ -12,9 +12,23 @@ class PerfTest extends Simulation {
 
   //protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
 
-  
+  /*
+    // default behavior: use an Iterator on the underlying sequence
+    csv("foo").queue();
+    
+    // randomly pick an entry in the sequence
+    sv("foo").random();
+    
+    // shuffle entries, then behave like queue
+    csv("foo").shuffle();
+    
+    // go back to the top of the sequence once the end is reached
+    csv("foo").circular();
+  */
 
-  val createArticle = scenario("Create and delete article").exec(karateFeature("classpath:conduitApp/performance/createArticle.feature"))
+  val csvFeeder = csv("articles.csv").circular
+
+  val createArticle = scenario("Create and delete article").feed(csvFeeder).exec(karateFeature("classpath:conduitApp/performance/createArticle.feature"))
 
 
   setUp(
