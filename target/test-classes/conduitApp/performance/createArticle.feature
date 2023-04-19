@@ -15,6 +15,8 @@ Scenario: Create and delete article
     * configure headers = {"Authorization": #('Token ' + __gatling.token)}
     Given path 'articles'
     And request articleRequestBody
+    And header karate-name = 'Create an article' // from protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
+    # And header karate-name = 'Title requested: ' + __gatling.Title // creates reports for every title
     When method Post
     Then status 200
     * def articleId = response.article.slug

@@ -14,7 +14,7 @@ class PerfTest extends Simulation {
     "/api/articles/{articleId}" -> Nil // in scala Nil == null
   )
 
-  //protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
+  protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
 
   /*
     https://gatling.io/docs/gatling/reference/current/core/session/feeder/#csv-feeders
