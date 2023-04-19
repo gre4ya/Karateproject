@@ -3,10 +3,12 @@ services:
   karate-tests:
     image: karate-tests
     build:
-      context: .
+      context: . #start point -> root of the directory
       dockerfile: ./dockerfile
     volumes:
-      - ./target:/usr/src/app/target
-      - ~/.m2:/root/.m2
+      - ./target:/usr/src/app/target # copy target folder from continer to host machine 
+      - ~/.m2:/root/.m2 # checkin chache first on lockal
     command: mvn test
-    
+
+    # to run docker-compose -> $ docker-compose up --build
+    # to compleat network and shut down the connection -> $ docker-compose down

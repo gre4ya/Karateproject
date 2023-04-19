@@ -9,9 +9,6 @@ COPY ./scr/test/java /usr/scr/app/scr/test/java
 
 # $docker run -it karatetest
 
-# $ docker-compose up --build
-# $ docker-compose down
-
 
 
 
