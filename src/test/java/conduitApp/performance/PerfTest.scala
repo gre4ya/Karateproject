@@ -4,7 +4,11 @@ import com.intuit.karate.gatling.PreDef._
 import io.gatling.core.Predef._
 import scala.concurrent.duration._
 
+import conduitApp.performance.createTokens.CreateTokens
+
 class PerfTest extends Simulation {
+
+    CreateTokens.createAccessTokens()
 
   val protocol = karateProtocol(
     "/api/articles/{articleId}" -> Nil // in scala Nil == null
@@ -13,6 +17,8 @@ class PerfTest extends Simulation {
   //protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
 
   /*
+    https://gatling.io/docs/gatling/reference/current/core/session/feeder/#csv-feeders
+
     // default behavior: use an Iterator on the underlying sequence
     csv("foo").queue();
     
@@ -28,7 +34,12 @@ class PerfTest extends Simulation {
 
   val csvFeeder = csv("articles.csv").circular
 
-  val createArticle = scenario("Create and delete article").feed(csvFeeder).exec(karateFeature("classpath:conduitApp/performance/createArticle.feature"))
+  val tokenFeeder = Iterator.continually(Map("token" -> CreateTokens.getNextToken))
+
+  val createArticle = scenario("Create and delete article")
+        .feed(csvFeeder)
+        .feed(tokenFeeder)
+        .exec(karateFeature("classpath:conduitApp/performance/createArticle.feature"))
 
 
   setUp(
@@ -41,7 +52,6 @@ class PerfTest extends Simulation {
         nothingFor(5 seconds),
         constantUsersPerSec(1) during (5 seconds),
         ).protocols(protocol)
-
   ) 
 
  /*

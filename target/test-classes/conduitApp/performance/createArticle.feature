@@ -12,6 +12,7 @@ Background: Define URL
     * set articleRequestBody.article.body = dataGenerator.getRandomArticleValues().body
 
 Scenario: Create and delete article
+    * configure headers = {"Authorization": #('Token ' + __gatling.token)}
     Given path 'articles'
     And request articleRequestBody
     When method Post
